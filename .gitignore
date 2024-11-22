@@ -1,5 +1,5 @@
 /wasm/
-/dist/
+#/dist/
 /lib/wasm
 /.idea/.gitignore
 /.idea/material_theme_project_new.xml
