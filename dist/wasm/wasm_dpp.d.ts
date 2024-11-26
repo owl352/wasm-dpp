@@ -1530,6 +1530,10 @@ export class DocumentTransition {
 */
   getType(): string;
 /**
+* @returns {any}
+*/
+  getData(): any;
+/**
 * @returns {number}
 */
   getAction(): number;
@@ -6233,6 +6237,7 @@ export interface InitOutput {
   readonly __wbg_documenttransition_free: (a: number) => void;
   readonly documenttransition_getId: (a: number) => number;
   readonly documenttransition_getType: (a: number, b: number) => void;
+  readonly documenttransition_getData: (a: number) => number;
   readonly documenttransition_getAction: (a: number) => number;
   readonly documenttransition_getDataContractId: (a: number) => number;
   readonly documenttransition_setDataContractId: (a: number, b: number, c: number) => void;
