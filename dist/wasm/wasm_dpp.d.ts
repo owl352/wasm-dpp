@@ -2421,11 +2421,11 @@ export class IdentityCreditTransferTransition {
 /**
 * @returns {bigint}
 */
-  getIdentityContractNonce(): bigint;
+  getNonce(): bigint;
 /**
-* @param {bigint} identity_nonce
+* @param {bigint} nonce
 */
-  setIdentityContractNonce(identity_nonce: bigint): void;
+  setNonce(nonce: bigint): void;
 /**
 * @param {any} options
 * @returns {any}
@@ -2561,14 +2561,6 @@ export class IdentityCreditWithdrawalTransition {
 * @param {number} user_fee_increase
 */
   setUserFeeIncrease(user_fee_increase: number): void;
-/**
-* @returns {bigint}
-*/
-  getIdentityContractNonce(): bigint;
-/**
-* @param {bigint} identity_nonce
-*/
-  setIdentityContractNonce(identity_nonce: bigint): void;
 /**
 * @param {any} options
 * @returns {any}
@@ -4426,18 +4418,6 @@ export class MasternodeVoteTransition {
 */
   setProTxHash(pro_tx_hash: any): void;
 /**
-* @returns {number}
-*/
-  getUserFeeIncrease(): number;
-/**
-* @param {number} user_fee_increase
-*/
-  setUserFeeIncrease(user_fee_increase: number): void;
-/**
-* @returns {bigint}
-*/
-  getIdentityContractNonce(): bigint;
-/**
 * @param {any} options
 * @returns {any}
 */
@@ -4471,6 +4451,18 @@ export class MasternodeVoteTransition {
 */
   isVotingStateTransition(): boolean;
 /**
+* @returns {number}
+*/
+  getUserFeeIncrease(): number;
+/**
+* @param {number} user_fee_increase
+*/
+  setUserFeeIncrease(user_fee_increase: number): void;
+/**
+* @returns {bigint}
+*/
+  getIdentityContractNonce(): bigint;
+/**
 * @returns {object | undefined}
 */
   getContestedDocumentResourceVotePoll(): object | undefined;
@@ -4488,10 +4480,6 @@ export class MasternodeVoteTransition {
 * @param {Uint8Array | undefined} signature
 */
   setSignature(signature?: Uint8Array): void;
-/**
-* @returns {number}
-*/
-  getSignaturePublicKeyId(): number;
 /**
 * @param {IdentityPublicKey} identity_public_key
 * @param {Uint8Array} private_key
@@ -5587,8 +5575,8 @@ export interface InitOutput {
   readonly identitycredittransfertransition_setAmount: (a: number, b: number) => void;
   readonly identitycredittransfertransition_getUserFeeIncrease: (a: number) => number;
   readonly identitycredittransfertransition_setUserFeeIncrease: (a: number, b: number) => void;
-  readonly identitycredittransfertransition_getIdentityContractNonce: (a: number) => number;
-  readonly identitycredittransfertransition_setIdentityContractNonce: (a: number, b: number) => void;
+  readonly identitycredittransfertransition_getNonce: (a: number) => number;
+  readonly identitycredittransfertransition_setNonce: (a: number, b: number) => void;
   readonly identitycredittransfertransition_toObject: (a: number, b: number, c: number) => void;
   readonly identitycredittransfertransition_toBuffer: (a: number, b: number) => void;
   readonly identitycredittransfertransition_toJSON: (a: number, b: number) => void;
@@ -6013,9 +6001,6 @@ export interface InitOutput {
   readonly masternodevotetransition_getType: (a: number) => number;
   readonly masternodevotetransition_getProTxHash: (a: number) => number;
   readonly masternodevotetransition_setProTxHash: (a: number, b: number) => void;
-  readonly masternodevotetransition_getUserFeeIncrease: (a: number) => number;
-  readonly masternodevotetransition_setUserFeeIncrease: (a: number, b: number) => void;
-  readonly masternodevotetransition_getIdentityContractNonce: (a: number) => number;
   readonly masternodevotetransition_toObject: (a: number, b: number, c: number) => void;
   readonly masternodevotetransition_toBuffer: (a: number, b: number) => void;
   readonly masternodevotetransition_toJSON: (a: number, b: number) => void;
@@ -6024,11 +6009,13 @@ export interface InitOutput {
   readonly masternodevotetransition_isDocumentStateTransition: (a: number) => number;
   readonly masternodevotetransition_isIdentityStateTransition: (a: number) => number;
   readonly masternodevotetransition_isVotingStateTransition: (a: number) => number;
+  readonly masternodevotetransition_getUserFeeIncrease: (a: number) => number;
+  readonly masternodevotetransition_setUserFeeIncrease: (a: number, b: number) => void;
+  readonly masternodevotetransition_getIdentityContractNonce: (a: number) => number;
   readonly masternodevotetransition_getContestedDocumentResourceVotePoll: (a: number) => number;
   readonly masternodevotetransition_signByPrivateKey: (a: number, b: number, c: number, d: number, e: number, f: number) => void;
   readonly masternodevotetransition_getSignature: (a: number) => number;
   readonly masternodevotetransition_setSignature: (a: number, b: number, c: number) => void;
-  readonly masternodevotetransition_getSignaturePublicKeyId: (a: number) => number;
   readonly masternodevotetransition_sign: (a: number, b: number, c: number, d: number, e: number, f: number) => void;
   readonly __wbg_instantassetlockproof_free: (a: number) => void;
   readonly instantassetlockproof_new: (a: number, b: number) => void;
@@ -6184,8 +6171,6 @@ export interface InitOutput {
   readonly identitycreditwithdrawaltransition_setNonce: (a: number, b: number) => void;
   readonly identitycreditwithdrawaltransition_getUserFeeIncrease: (a: number) => number;
   readonly identitycreditwithdrawaltransition_setUserFeeIncrease: (a: number, b: number) => void;
-  readonly identitycreditwithdrawaltransition_getIdentityContractNonce: (a: number) => number;
-  readonly identitycreditwithdrawaltransition_setIdentityContractNonce: (a: number, b: number) => void;
   readonly identitycreditwithdrawaltransition_toObject: (a: number, b: number, c: number) => void;
   readonly identitycreditwithdrawaltransition_toBuffer: (a: number, b: number) => void;
   readonly identitycreditwithdrawaltransition_toJSON: (a: number, b: number) => void;
