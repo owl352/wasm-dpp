@@ -87,6 +87,10 @@ impl DocumentTransitionWasm {
             JsValue::NULL
         }
     }
+    #[wasm_bindgen(js_name=getEntropy)]
+    pub fn get_entropy(&self) -> Vec<u8> {
+        self.0.entropy()
+    }
 
     #[wasm_bindgen(js_name=setRevision)]
     pub fn set_revision(&mut self, revision: u32) {

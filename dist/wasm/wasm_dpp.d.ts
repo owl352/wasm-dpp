@@ -1554,6 +1554,10 @@ export class DocumentTransition {
 */
   getRevision(): any;
 /**
+* @returns {Uint8Array}
+*/
+  getEntropy(): Uint8Array;
+/**
 * @param {number} revision
 */
   setRevision(revision: number): void;
@@ -5672,6 +5676,7 @@ export interface InitOutput {
   readonly documenttransition_getDataContractId: (a: number) => number;
   readonly documenttransition_setDataContractId: (a: number, b: number, c: number) => void;
   readonly documenttransition_getRevision: (a: number) => number;
+  readonly documenttransition_getEntropy: (a: number, b: number) => void;
   readonly documenttransition_setRevision: (a: number, b: number) => void;
   readonly documenttransition_hasPrefundedBalance: (a: number) => number;
   readonly documenttransition_getPrefundedVotingBalance: (a: number, b: number) => void;
