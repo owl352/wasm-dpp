@@ -1,7 +1,7 @@
 {
   "name": "@dashevo/wasm-dpp",
   "version": "1.7.0",
-  "description": "The JavaScript implementation of the Dash Platform Protocol",
+  "description": "The JavaScript implementation of the Dash Platform Protocol forked by owl",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -23,7 +23,7 @@
       "lint"
     ]
   },
-  "author": "Dash Core Team forked by owl",
+  "author": "Dash Core Team",
   "contributors": [
     {
       "name": "Anton Suprunchuk",
@@ -44,7 +44,7 @@
     "@babel/core": "^7.23.3",
     "@babel/preset-env": "^7.23.3",
     "@dashevo/dashcore-lib": "~0.22.0",
-    "@dashevo/dpns-contract": "^1.5.1",
+    "@dashevo/dpns-contract": "1.7.1",
     "@types/bs58": "^4.0.1",
     "@types/node": "^14.6.0",
     "@yarnpkg/pnpify": "^4.0.0-rc.42",
