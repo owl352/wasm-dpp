@@ -1552,6 +1552,10 @@ export class DocumentTransition {
 /**
 * @returns {any}
 */
+  getIdentityContractNonce(): any;
+/**
+* @returns {any}
+*/
   getRevision(): any;
 /**
 * @returns {Uint8Array | undefined}
@@ -5709,6 +5713,7 @@ export interface InitOutput {
   readonly documenttransition_getAction: (a: number) => number;
   readonly documenttransition_getDataContractId: (a: number) => number;
   readonly documenttransition_setDataContractId: (a: number, b: number, c: number) => void;
+  readonly documenttransition_getIdentityContractNonce: (a: number) => number;
   readonly documenttransition_getRevision: (a: number) => number;
   readonly documenttransition_getEntropy: (a: number, b: number) => void;
   readonly documenttransition_setRevision: (a: number, b: number) => void;
