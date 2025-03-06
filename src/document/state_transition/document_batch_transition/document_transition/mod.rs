@@ -17,6 +17,7 @@ use dpp::{
 use serde::Serialize;
 use serde_json::Value as JsonValue;
 use wasm_bindgen::prelude::*;
+use dpp::prelude::Revision;
 use dpp::fee::Credits;
 use dpp::platform_value::converter::serde_json::BTreeValueJsonConverter;
 use dpp::state_transition::documents_batch_transition::document_base_transition::DocumentBaseTransition;
@@ -95,12 +96,8 @@ impl DocumentTransitionWasm {
     }
 
     #[wasm_bindgen(js_name=getRevision)]
-    pub fn get_revision(&self) -> JsValue {
-        if let Some(revision) = self.0.revision() {
-            (revision as f64).into()
-        } else {
-            JsValue::NULL
-        }
+    pub fn get_revision(&self) -> Option<Revision> {
+        self.0.revision()
     }
     #[wasm_bindgen(js_name=getEntropy)]
     pub fn get_entropy(&self) -> Option<Vec<u8>> {
@@ -132,8 +129,8 @@ impl DocumentTransitionWasm {
     }
 
     #[wasm_bindgen(js_name=setRevision)]
-    pub fn set_revision(&mut self, revision: u32) {
-        self.0.set_revision(revision as u64);
+    pub fn set_revision(&mut self, revision: u64) {
+        self.0.set_revision(revision);
     }
 
     #[wasm_bindgen(js_name=hasPrefundedBalance)]
