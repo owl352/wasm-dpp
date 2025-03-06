@@ -2,7 +2,6 @@
 name = "wasm-dpp"
 version = "1.8.0"
 edition = "2021"
-rust-version.workspace = true
 authors = ["Anton Suprunchuk <anton.suprunchuk@gmail.com>"]
 
 [lib]
@@ -20,7 +19,7 @@ js-sys = "0.3.53"
 web-sys = { version = "0.3.6", features = ["console"] }
 thiserror = { version = "1.0.63" }
 serde-wasm-bindgen = { git = "https://github.com/QuantumExplorer/serde-wasm-bindgen", branch = "feat/not_human_readable" }
-dpp = { path = "../rs-dpp", default-features = false, features = [
+dpp = { path = "../../platform/packages/rs-dpp", default-features = false, features = [
     "state-transition-serde-conversion",
     "state-transition-value-conversion",
     "data-contract-value-conversion",

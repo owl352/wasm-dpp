@@ -25,6 +25,7 @@ use dpp::state_transition::documents_batch_transition::document_transition::acti
 use dpp::version::PlatformVersion;
 use std::convert::TryFrom;
 use std::str::FromStr;
+use dpp::platform_value::string_encoding::Encoding::Base58;
 
 #[wasm_bindgen(js_name=DocumentTransitions)]
 #[derive(Debug, Default)]
@@ -110,8 +111,14 @@ impl DocumentFactoryWASM {
         documents: &JsValue,
         nonce_counter_value: &js_sys::Object, //IdentityID/ContractID -> nonce
     ) -> Result<DocumentsBatchTransitionWasm, JsValue> {
+        use web_sys::console;
+
+        console::log_1(&"Start".into());
+
         let mut nonce_counter = BTreeMap::new();
         let mut contract_ids_to_check = HashSet::<&Identifier>::new();
+
+        console::log_1(&"Getting nonce".into());
 
         // TODO: move to a function and handle errors instead of doing unwraps
         {
@@ -123,11 +130,16 @@ impl DocumentFactoryWASM {
                     let contract_ids = key_value.get(1);
                     let contract_ids = js_sys::Object::try_from(&contract_ids).unwrap();
 
+
                     js_sys::Object::entries(contract_ids)
                         .iter()
                         .for_each(|entry| {
                             let key_value = js_sys::Array::from(&entry);
                             let contract_id = identifier_from_js_value(&key_value.get(0)).unwrap();
+
+                            console::log_1(&"contract_id".into());
+                            console::log_1(&(contract_id.to_string(Base58)).into());
+
                             let nonce = key_value
                                 .get(1)
                                 .as_string()
@@ -139,9 +151,13 @@ impl DocumentFactoryWASM {
                 });
         }
 
+        console::log_1(&"2".into());
+
         nonce_counter.iter().for_each(|((_, contract_id), _)| {
             contract_ids_to_check.insert(contract_id);
         });
+
+        console::log_1(&"extract_documents_by_action".into());
 
         let documents_by_action = extract_documents_by_action(documents)?;
 

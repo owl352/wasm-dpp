@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="CargoProjects">
+    <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="936d7a57-d565-490c-8c7c-2d251b19eb6d" name="Changes" comment="test">
+    <list default="true" id="936d7a57-d565-490c-8c7c-2d251b19eb6d" name="Changes" comment="fix">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/wasm-dpp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/wasm-dpp.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/wasm/wasm_dpp.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/wasm/wasm_dpp.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/wasm/wasm_dpp.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/wasm/wasm_dpp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/wasm/wasm_dpp_bg.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/wasm/wasm_dpp_bg.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/wasm/wasm_dpp.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/wasm/wasm_dpp.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/build-wasm.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/build-wasm.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/document/factory.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/document/factory.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +46,9 @@
     &quot;accountId&quot;: &quot;8be779cb-d11b-4ec9-a46c-c7b4200a6e83&quot;
   }
 }</component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="yy2gbl9p" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -42,24 +58,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;test&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/bebra/Documents/Dash/wasm-vote-choice/wasm-dpp&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.rust.reset.selective.auto.import": "true",
+    "git-widget-placeholder": "test",
+    "last_opened_file_path": "/Users/bebra/Documents/Dash/wasm-vote-choice/wasm-dpp",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true",
+    "org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon": "",
+    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
+  </component>
+  <component name="RustProjectSettings">
+    <option name="toolchainHomeDirectory" value="$USER_HOME$/.cargo/bin" />
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -93,6 +115,7 @@
       <workItem from="1741236485477" duration="1032000" />
       <workItem from="1741237823188" duration="78000" />
       <workItem from="1741239086093" duration="856000" />
+      <workItem from="1741240411352" duration="1029000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
@@ -302,7 +325,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741239464588</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="fix">
+      <option name="closed" value="true" />
+      <created>1741240530659</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1741240530659</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -323,8 +354,8 @@
     <MESSAGE value="1" />
     <MESSAGE value="bump" />
     <MESSAGE value="update" />
-    <MESSAGE value="fix" />
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
   </component>
 </project>

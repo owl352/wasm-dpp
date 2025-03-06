@@ -17,7 +17,7 @@ OUTPUT_DIR="${PWD}/wasm"
 # shellcheck disable=SC2034
 OUTPUT_FILE="${OUTPUT_DIR}/wasm_dpp_bg.wasm"
 BUILD_COMMAND="cargo build --config net.git-fetch-with-cli=true --target=${TARGET} ${PROFILE_ARG}"
-BINDGEN_COMMAND="wasm-bindgen --out-dir=${OUTPUT_DIR} --target=web --omit-default-module-path ../../target/${TARGET}/${PROFILE}/wasm_dpp.wasm"
+BINDGEN_COMMAND="wasm-bindgen --out-dir=${OUTPUT_DIR} --target=web --omit-default-module-path ./target/${TARGET}/${PROFILE}/wasm_dpp.wasm"
 
 if ! [[ -d ${OUTPUT_DIR} ]]; then
   mkdir -p "${OUTPUT_DIR}"
