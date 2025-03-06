@@ -1,4 +1,5 @@
 {
+  "author": "Dash Core Team forked by owl",
   "name": "@dashevo/wasm-dpp",
   "version": "1.8.0",
   "description": "The JavaScript implementation of the Dash Platform Protocol",
@@ -23,7 +24,6 @@
       "lint"
     ]
   },
-  "author": "Dash Core Team",
   "contributors": [
     {
       "name": "Anton Suprunchuk",
