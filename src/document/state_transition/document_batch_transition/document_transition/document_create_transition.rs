@@ -4,9 +4,9 @@ use dpp::state_transition::documents_batch_transition::document_create_transitio
 
 use dpp::document::INITIAL_REVISION;
 
-use wasm_bindgen::prelude::*;
 use dpp::state_transition::documents_batch_transition::document_base_transition::v0::v0_methods::DocumentBaseTransitionV0Methods;
 use dpp::state_transition::documents_batch_transition::document_create_transition::v0::v0_methods::DocumentCreateTransitionV0Methods;
+use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen(js_name=DocumentCreateTransition)]
 #[derive(Debug, Clone)]
@@ -79,8 +79,8 @@ impl DocumentCreateTransitionWasm {
     }
 
     #[wasm_bindgen(getter, js_name=INITIAL_REVISION)]
-    pub fn initial_revision() -> u32 {
-        INITIAL_REVISION as u32
+    pub fn initial_revision() -> u64 {
+        INITIAL_REVISION
     }
 
     #[wasm_bindgen(js_name = getEntropy)]
@@ -90,11 +90,11 @@ impl DocumentCreateTransitionWasm {
 
     #[wasm_bindgen(js_name=getIdentityContractNonce)]
     pub fn get_identity_contract_nonce(&self) -> u64 {
-        self.inner.base().identity_contract_nonce() as u64
+        self.inner.base().identity_contract_nonce()
     }
 
     #[wasm_bindgen(js_name=setIdentityContractNonce)]
-    pub fn set_identity_contract_nonce(&mut self, identity_contract_nonce: u64) -> () {
+    pub fn set_identity_contract_nonce(&mut self, identity_contract_nonce: u64) {
         let mut base = self.inner.base().clone();
 
         base.set_identity_contract_nonce(identity_contract_nonce);
@@ -107,9 +107,7 @@ impl DocumentCreateTransitionWasm {
         let prefunded_voting_balance = self.inner.prefunded_voting_balance().clone();
 
         match prefunded_voting_balance {
-            None => {
-                Ok(JsValue::null())
-            },
+            None => Ok(JsValue::null()),
             Some((index_name, credits)) => {
                 let js_object = js_sys::Object::new();
 

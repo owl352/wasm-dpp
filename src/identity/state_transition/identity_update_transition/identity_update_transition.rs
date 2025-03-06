@@ -1,24 +1,12 @@
-use std::convert::TryInto;
-use std::default::Default;
-
-use serde::{Deserialize, Serialize};
-
-use wasm_bindgen::__rt::Ref;
-use wasm_bindgen::prelude::*;
-
+use crate::bls_adapter::{BlsAdapter, JsBlsAdapter};
+use crate::errors::from_dpp_err;
 use crate::identifier::IdentifierWrapper;
-
+use crate::utils::{generic_of_js_val, WithJsError};
 use crate::{
     buffer::Buffer,
     identity::state_transition::identity_public_key_transitions::IdentityPublicKeyWithWitnessWasm,
     identity::IdentityPublicKeyWasm, with_js_error,
 };
-
-use crate::bls_adapter::{BlsAdapter, JsBlsAdapter};
-
-use crate::utils::{generic_of_js_val, WithJsError};
-
-use crate::errors::from_dpp_err;
 use dpp::errors::consensus::signature::SignatureError;
 use dpp::errors::consensus::ConsensusError;
 use dpp::errors::ProtocolError;
@@ -34,6 +22,10 @@ use dpp::state_transition::StateTransition;
 use dpp::state_transition::StateTransitionIdentitySigned;
 use dpp::version::PlatformVersion;
 use dpp::{identifier::Identifier, state_transition::StateTransitionLike};
+use serde::{Deserialize, Serialize};
+use std::convert::TryInto;
+use std::default::Default;
+use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen(js_name=IdentityUpdateTransition)]
 #[derive(Clone)]
@@ -93,11 +85,10 @@ impl IdentityUpdateTransitionWasm {
             keys_to_add = keys
                 .iter()
                 .map(|value| {
-                    let public_key: Ref<IdentityPublicKeyWithWitnessWasm> =
-                        generic_of_js_val::<IdentityPublicKeyWithWitnessWasm>(
-                            value,
-                            "IdentityPublicKeyWithWitness",
-                        )?;
+                    let public_key = generic_of_js_val::<IdentityPublicKeyWithWitnessWasm>(
+                        value,
+                        "IdentityPublicKeyWithWitness",
+                    )?;
                     Ok(public_key.clone().into())
                 })
                 .collect::<Result<Vec<IdentityPublicKeyInCreation>, JsValue>>()?;
@@ -185,7 +176,7 @@ impl IdentityUpdateTransitionWasm {
     }
 
     #[wasm_bindgen(js_name=setIdentityContractNonce)]
-    pub fn set_identity_contract_nonce(&mut self, identity_nonce: u64) -> () {
+    pub fn set_identity_contract_nonce(&mut self, identity_nonce: u64) {
         self.0.set_nonce(identity_nonce)
     }
 
@@ -444,12 +435,12 @@ impl IdentityUpdateTransitionWasm {
     }
 
     #[wasm_bindgen(js_name=getRevision)]
-    pub fn get_revision(&self) -> u32 {
-        self.0.revision() as u32
+    pub fn get_revision(&self) -> u64 {
+        self.0.revision()
     }
 
     #[wasm_bindgen(js_name=setRevision)]
-    pub fn set_revision(&mut self, revision: u32) {
+    pub fn set_revision(&mut self, revision: u64) {
         self.0.set_revision(revision as u64)
     }
 
