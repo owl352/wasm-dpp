@@ -44,7 +44,7 @@
     "@babel/core": "^7.23.3",
     "@babel/preset-env": "^7.23.3",
     "@dashevo/dashcore-lib": "~0.22.0",
-    "@dashevo/dpns-contract": "workspace:*",
+    "@dashevo/dpns-contract": "1.8.0",
     "@types/bs58": "^4.0.1",
     "@types/node": "^14.6.0",
     "@yarnpkg/pnpify": "^4.0.0-rc.42",
