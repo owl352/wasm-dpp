@@ -1,3 +1,5 @@
+const crypto = require('crypto');
+
 const generateRandomIdentifierAsync = require('../../../lib/test/utils/generateRandomIdentifierAsync');
 const { default: loadWasmDpp, DocumentCreateTransition } = require('../../..');
 const { getLatestProtocolVersion } = require('../../..');
@@ -27,6 +29,7 @@ describe('Document', () => {
     const ownerId = await generateRandomIdentifierAsync();
     const dataContractFactory = new DataContractFactory(
       1,
+      { generate: () => crypto.randomBytes(32) },
     );
 
     const rawDataContract = {
@@ -80,7 +83,7 @@ describe('Document', () => {
       $type: 'test',
       $dataContractId: dataContract.getId(),
       $ownerId: ownerId,
-      $revision: Number(DocumentCreateTransition.INITIAL_REVISION.toString()),
+      $revision: DocumentCreateTransition.INITIAL_REVISION,
       $createdAt: now,
       $createdAtBlockHeight: 1,
       $createdAtCoreBlockHeight: 1,
@@ -98,7 +101,7 @@ describe('Document', () => {
       $type: 'test',
       $dataContractId: dataContract.getId().toBuffer(),
       $ownerId: ownerId.toBuffer(),
-      $revision: Number(DocumentCreateTransition.INITIAL_REVISION.toString()),
+      $revision: DocumentCreateTransition.INITIAL_REVISION,
       $createdAt: now,
       $createdAtBlockHeight: 1,
       $createdAtCoreBlockHeight: 1,
@@ -258,7 +261,7 @@ describe('Document', () => {
 
       document = new ExtendedDocument(rawDocument, dataContract);
 
-      expect(document.getRevision()).to.equal(BigInt(rawDocument.$revision));
+      expect(document.getRevision()).to.equal(rawDocument.$revision);
     });
 
     it('should create Document with $createdAt and data if present', async () => {
@@ -339,7 +342,7 @@ describe('Document', () => {
 
   describe('#setRevision/#getRevision', () => {
     it('should set $revision and get $revision', () => {
-      const revision = BigInt(5);
+      const revision = 5;
 
       document.setRevision(revision);
 

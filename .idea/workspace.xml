@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="936d7a57-d565-490c-8c7c-2d251b19eb6d" name="Changes" comment="update">
+    <list default="true" id="936d7a57-d565-490c-8c7c-2d251b19eb6d" name="Changes" comment="fix">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +46,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;test&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/bebra/Documents/Dash/wasm-vote-choice/wasm-dpp&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -89,6 +90,8 @@
       <workItem from="1735236023441" duration="1938000" />
       <workItem from="1735306118421" duration="672000" />
       <workItem from="1737641796864" duration="1114000" />
+      <workItem from="1741236172667" duration="153000" />
+      <workItem from="1741236485477" duration="1032000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
@@ -250,7 +253,31 @@
       <option name="project" value="LOCAL" />
       <updated>1737641845257</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="update">
+      <option name="closed" value="true" />
+      <created>1741236319239</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1741236319239</updated>
+    </task>
+    <task id="LOCAL-00022" summary="fix">
+      <option name="closed" value="true" />
+      <created>1741236529538</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1741236529538</updated>
+    </task>
+    <task id="LOCAL-00023" summary="fix">
+      <option name="closed" value="true" />
+      <created>1741237454820</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1741237454820</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,8 +298,8 @@
     <MESSAGE value="1" />
     <MESSAGE value="test" />
     <MESSAGE value="bump" />
-    <MESSAGE value="fix" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
   </component>
 </project>

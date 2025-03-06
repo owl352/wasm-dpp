@@ -22,11 +22,21 @@ describe('Identity', () => {
 
     rawIdentity = identity.toObject();
 
-    metadataFixture = new Metadata(BigInt(42), 1, BigInt(100), 2);
+    metadataFixture = new Metadata({
+      blockHeight: 42,
+      coreChainLockedHeight: 0,
+      timeMs: 100,
+      protocolVersion: 2,
+    });
 
     identity.setMetadata(metadataFixture);
 
-    metadataFixture = new Metadata(BigInt(42), 1, BigInt(100), 2);
+    metadataFixture = new Metadata({
+      blockHeight: 42,
+      coreChainLockedHeight: 0,
+      timeMs: 100,
+      protocolVersion: 2,
+    });
   });
 
   describe('#constructor', () => {
@@ -163,42 +173,52 @@ describe('Identity', () => {
 
   describe('#getBalance', () => {
     it('should return set identity balance', () => {
-      identity.setBalance(BigInt(42));
-      expect(identity.getBalance()).to.equal(BigInt(42));
+      identity.setBalance(42);
+      expect(identity.getBalance()).to.equal(42);
     });
   });
 
   describe('#setBalance', () => {
     it('should set identity balance', () => {
-      identity.setBalance(BigInt(42));
-      expect(identity.getBalance()).to.equal(BigInt(42));
+      identity.setBalance(42);
+      expect(identity.getBalance()).to.equal(42);
     });
   });
 
   describe('#increaseBalance', () => {
     it('should increase identity balance', () => {
-      const result = identity.increaseBalance(BigInt(42));
+      const result = identity.increaseBalance(42);
 
-      expect(result).to.equal(BigInt(42));
-      expect(identity.getBalance()).to.equal(BigInt(42));
+      expect(result).to.equal(42);
+      expect(identity.getBalance()).to.equal(42);
     });
   });
 
   describe('#reduceBalance', () => {
     it('should reduce identity balance', () => {
-      identity.setBalance(BigInt(42));
+      identity.setBalance(42);
 
-      const result = identity.reduceBalance(BigInt(2));
+      const result = identity.reduceBalance(2);
 
-      expect(result).to.equal(BigInt(40));
-      expect(identity.getBalance()).to.equal(BigInt(40));
+      expect(result).to.equal(40);
+      expect(identity.getBalance()).to.equal(40);
     });
   });
 
   describe('#setMetadata', () => {
     it('should set metadata', () => {
-      const otherMetadata = new Metadata(BigInt(43), 1, BigInt(100), 2);
-      const expectedMetadata = new Metadata(BigInt(43), 1, BigInt(100), 2);
+      const otherMetadata = new Metadata({
+        blockHeight: 43,
+        coreChainLockedHeight: 1,
+        timeMs: 100,
+        protocolVersion: 2,
+      });
+      const expectedMetadata = new Metadata({
+        blockHeight: 43,
+        coreChainLockedHeight: 1,
+        timeMs: 100,
+        protocolVersion: 2,
+      });
 
       identity.setMetadata(otherMetadata);
 

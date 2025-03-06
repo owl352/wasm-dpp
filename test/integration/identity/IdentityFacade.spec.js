@@ -32,7 +32,7 @@ describe('IdentityFacade', () => {
     chainAssetLockProof = new ChainAssetLockProof(chainAssetLockProofJS.toObject());
 
     identity = await getIdentityFixture(instantAssetLockProof.createIdentifier());
-    identity.setBalance(BigInt(0));
+    identity.setBalance(0);
   });
 
   describe('#create', () => {
@@ -62,11 +62,16 @@ describe('IdentityFacade', () => {
 
   describe('#createFromBuffer', () => {
     it('should create Identity from a Buffer', () => {
-      const deserialized = dpp.identity.createFromBuffer(identity.toBuffer());
+      let result;
+      try {
+        result = dpp.identity.createFromBuffer(identity.toBuffer());
+      } catch (e) {
+        console.dir(e.getErrors()[0].toString());
+      }
 
-      expect(deserialized).to.be.an.instanceOf(Identity);
+      expect(result).to.be.an.instanceOf(Identity);
 
-      expect(deserialized.toObject()).to.deep.equal(deserialized.toObject());
+      expect(result.toObject()).to.deep.equal(identity.toObject());
     });
   });
 
@@ -181,7 +186,7 @@ describe('IdentityFacade', () => {
       expect(stateTransition.getIdentityId().toBuffer())
         .to.be.deep.equal(identity.getId().toBuffer());
       expect(stateTransition.getRevision()).to.equal(
-        identity.getRevision() + BigInt(1),
+        identity.getRevision() + 1,
       );
       expect(
         stateTransition.getPublicKeysToAdd().map((pk) => pk.toObject()),
