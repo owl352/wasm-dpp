@@ -222,7 +222,7 @@ impl MasternodeVoteTransitionWasm {
 
     #[wasm_bindgen(js_name=getUserFeeIncrease)]
     pub fn get_user_fee_increase(&self) -> u16 {
-        self.0.user_fee_increase() as u16
+        self.0.user_fee_increase()
     }
 
     #[wasm_bindgen(js_name=setUserFeeIncrease)]
@@ -244,22 +244,20 @@ impl MasternodeVoteTransitionWasm {
                 Reflect::set(
                     &js_object,
                     &"choice".into(),
-                    &vote
-                        .resource_vote_choice()
-                        .clone()
-                        .to_string()
-                        .into(),
-                ).unwrap();
+                    &vote.resource_vote_choice().clone().to_string().into(),
+                )
+                .unwrap();
 
                 match vote.vote_poll() {
                     VotePoll::ContestedDocumentResourceVotePoll(
                         contested_document_resource_vote_poll,
                     ) => {
                         let contract_id = IdentifierWrapper::from(
-                            contested_document_resource_vote_poll.contract_id.clone(),
+                            contested_document_resource_vote_poll.contract_id,
                         );
 
-                        Reflect::set(&js_object, &"contractId".into(), &contract_id.into()).unwrap();
+                        Reflect::set(&js_object, &"contractId".into(), &contract_id.into())
+                            .unwrap();
                         Reflect::set(
                             &js_object,
                             &"documentTypeName".into(),
@@ -268,7 +266,7 @@ impl MasternodeVoteTransitionWasm {
                                 .clone()
                                 .into(),
                         )
-                            .unwrap();
+                        .unwrap();
                         Reflect::set(
                             &js_object,
                             &"indexName".into(),
@@ -277,7 +275,7 @@ impl MasternodeVoteTransitionWasm {
                                 .clone()
                                 .into(),
                         )
-                            .unwrap();
+                        .unwrap();
 
                         let config = bincode::config::standard()
                             .with_big_endian()
@@ -300,7 +298,7 @@ impl MasternodeVoteTransitionWasm {
                         Some(js_object)
                     }
                 }
-            },
+            }
         }
     }
 

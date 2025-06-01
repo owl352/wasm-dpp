@@ -3,9 +3,127 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="CargoProjects">
+    <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="936d7a57-d565-490c-8c7c-2d251b19eb6d" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/src/data_contract/tokens.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/document/state_transition/batch_transition/batched_transition/mod.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/document/state_transition/batch_transition/token_transition/burn.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/document/state_transition/batch_transition/token_transition/claim.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/document/state_transition/batch_transition/token_transition/config.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/document/state_transition/batch_transition/token_transition/destroy.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/document/state_transition/batch_transition/token_transition/direct_purchase.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/document/state_transition/batch_transition/token_transition/emergency_action.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/document/state_transition/batch_transition/token_transition/freeze.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/document/state_transition/batch_transition/token_transition/mint.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/document/state_transition/batch_transition/token_transition/mod.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/document/state_transition/batch_transition/token_transition/set_price_for_direct_purchase.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/document/state_transition/batch_transition/token_transition/transfer.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/document/state_transition/batch_transition/token_transition/unfreeze.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/state_transition/errors/state_transition_is_not_active_error.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/wasm-dpp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/wasm-dpp.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/dpp.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/dpp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/errors/AbstractConsensusError.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/errors/AbstractConsensusError.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/errors/DPPError.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/errors/DPPError.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/errors/patchConsensusErrors.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/errors/patchConsensusErrors.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/identifier/Identifier.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/identifier/Identifier.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/identifier/errors/IdentifierError.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/identifier/errors/IdentifierError.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/utils/extend.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/utils/extend.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/wasm/wasm_dpp.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/wasm/wasm_dpp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/wasm/wasm_dpp_bg.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/test/fixtures/getIdentityCreditTransferTransitionFixture.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/test/fixtures/getIdentityCreditTransferTransitionFixture.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/test/fixtures/getIdentityFixture.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/test/fixtures/getIdentityFixture.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/build-wasm.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/build-wasm.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_contract/data_contract.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_contract/data_contract.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_contract/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_contract/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_contract/state_transition/data_contract_create_transition/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_contract/state_transition/data_contract_create_transition/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_contract/state_transition/data_contract_update_transition/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_contract/state_transition/data_contract_update_transition/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_contract_factory/data_contract_factory.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_contract_factory/factory.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_contract_factory/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_contract_factory/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/document/document_facade.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/document/document_facade.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/document/errors/document_already_exists_error.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/document/errors/document_already_exists_error.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/document/errors/document_not_provided_error.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/document/errors/document_not_provided_error.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/document/errors/invalid_document_action_error.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/document/errors/invalid_document_action_error.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/document/extended_document.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/document/extended_document.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/document/factory.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/document/factory.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/document/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/document/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/document/state_transition/document_batch_transition/document_transition/document_create_transition.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/document/state_transition/batch_transition/document_transition/document_create_transition.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/document/state_transition/document_batch_transition/document_transition/document_delete_transition.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/document/state_transition/batch_transition/document_transition/document_delete_transition.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/document/state_transition/document_batch_transition/document_transition/document_replace_transition.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/document/state_transition/batch_transition/document_transition/document_replace_transition.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/document/state_transition/document_batch_transition/document_transition/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/document/state_transition/batch_transition/document_transition/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/document/state_transition/document_batch_transition/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/document/state_transition/batch_transition/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/document/state_transition/document_batch_transition/validation/basic/find_duplicates_by_id.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/document/state_transition/batch_transition/validation/basic/find_duplicates_by_id.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/document/state_transition/document_batch_transition/validation/basic/find_duplicates_by_indices.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/document/state_transition/batch_transition/validation/basic/find_duplicates_by_indices.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/document/state_transition/document_batch_transition/validation/basic/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/document/state_transition/batch_transition/validation/basic/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/document/state_transition/document_batch_transition/validation/basic/validate_documents_batch_transition_basic.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/document/state_transition/batch_transition/validation/basic/validate_documents_batch_transition_basic.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/document/state_transition/document_batch_transition/validation/basic/validate_partial_compound_indices.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/document/state_transition/batch_transition/validation/basic/validate_partial_compound_indices.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/document/state_transition/document_batch_transition/validation/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/document/state_transition/batch_transition/validation/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/document/state_transition/document_batch_transition/validation/state/fetch_extended_documents.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/document/state_transition/batch_transition/validation/state/fetch_extended_documents.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/document/state_transition/document_batch_transition/validation/state/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/document/state_transition/batch_transition/validation/state/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/document/state_transition/document_batch_transition/validation/state/validate_documents_batch_transitions_state.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/document/state_transition/batch_transition/validation/state/validate_documents_batch_transitions_state.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/document/state_transition/document_batch_transition/validation/state/validate_documents_uniqueness_by_indices.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/document/state_transition/batch_transition/validation/state/validate_documents_uniqueness_by_indices.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/document/state_transition/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/document/state_transition/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/errors/consensus/basic/identity/identity_insufficient_balance_error.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/errors/consensus/basic/identity/identity_insufficient_balance_error.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/errors/consensus/basic/state_transition/missing_state_transition_type_error.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/errors/consensus/basic/state_transition/missing_state_transition_type_error.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/errors/consensus/consensus_error.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/errors/consensus/consensus_error.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/errors/consensus/fee/balance_is_not_enough_error.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/errors/consensus/fee/balance_is_not_enough_error.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/errors/consensus/state/identity/invalid_identity_contract_nonce_error.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/errors/consensus/state/identity/invalid_identity_contract_nonce_error.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/errors/value_error.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/errors/value_error.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/identity/factory_utils.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/identity/factory_utils.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/identity/identity.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/identity/identity.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/identity/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/identity/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/identity/state_transition/asset_lock_proof/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/identity/state_transition/asset_lock_proof/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/identity/state_transition/identity_create_transition/identity_create_transition.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/identity/state_transition/identity_create_transition/transition.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/identity/state_transition/identity_create_transition/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/identity/state_transition/identity_create_transition/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/identity/state_transition/identity_credit_transfer_transition/transition.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/identity/state_transition/identity_credit_transfer_transition/transition.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/identity/state_transition/identity_credit_withdrawal_transition/transition.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/identity/state_transition/identity_credit_withdrawal_transition/transition.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/identity/state_transition/identity_public_key_transitions.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/identity/state_transition/identity_public_key_transitions.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/identity/state_transition/identity_topup_transition/identity_topup_transition.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/identity/state_transition/identity_topup_transition/transition.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/identity/state_transition/identity_topup_transition/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/identity/state_transition/identity_topup_transition/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/identity/state_transition/identity_update_transition/identity_update_transition.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/identity/state_transition/identity_update_transition/transition.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/identity/state_transition/identity_update_transition/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/identity/state_transition/identity_update_transition/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/identity/state_transition/identity_update_transition/to_object.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/identity/state_transition/identity_update_transition/to_object.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/identity/state_transition/transition_types.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/identity/state_transition/transition_types.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/metadata.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/metadata.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/state_transition/errors/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/state_transition/errors/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/state_transition/state_transition_factory.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/state_transition/state_transition_factory.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/voting/state_transition/masternode_vote_transition/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/voting/state_transition/masternode_vote_transition/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/voting/state_transition/masternode_vote_transition/to_object.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/voting/state_transition/masternode_vote_transition/to_object.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/integration/document/Document.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/integration/document/Document.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/integration/document/DocumentFacade.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/integration/document/DocumentFacade.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/integration/identity/IdentityFacade.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/integration/identity/IdentityFacade.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/integration/identity/stateTransition/IdentityUpdateTransition/validation/state/validateIdentityUpdateTransitionStateFactory.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/integration/identity/stateTransition/IdentityUpdateTransition/validation/state/validateIdentityUpdateTransitionStateFactory.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/integration/identity/stateTransition/assetLockProof/chain/validateChainAssetLockProofStructureFactory.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/integration/identity/stateTransition/assetLockProof/chain/validateChainAssetLockProofStructureFactory.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/integration/identity/stateTransition/assetLockProof/fetchAssetLockTransactionOutputFactory.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/integration/identity/stateTransition/assetLockProof/fetchAssetLockTransactionOutputFactory.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/integration/stateTransition/StateTransitionFacade.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/integration/stateTransition/StateTransitionFacade.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/unit/Metadata.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/unit/Metadata.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/unit/dataContract/DataContract.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/unit/dataContract/DataContract.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/unit/document/Document.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/unit/document/Document.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/unit/document/DocumentFactory.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/unit/document/DocumentFactory.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/unit/identity/Identity.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/unit/identity/Identity.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/unit/identity/IdentityFactory.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/unit/identity/IdentityFactory.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/unit/identity/stateTransition/IdentityUpdateTransition/IdentityUpdateTransition.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/unit/identity/stateTransition/IdentityUpdateTransition/IdentityUpdateTransition.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/unit/identity/stateTransition/identityCreditTransferTransition/identityCreditTransferTransition.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/unit/identity/stateTransition/identityCreditTransferTransition/identityCreditTransferTransition.spec.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,12 +145,15 @@
     &quot;assignee&quot;: &quot;owl352&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/owl352/wasm-dpp&quot;,
-    &quot;accountId&quot;: &quot;8be779cb-d11b-4ec9-a46c-c7b4200a6e83&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/owl352/wasm-dpp",
+    "accountId": "b7f1113e-5b22-47a9-bdf3-a32fdd631c21"
   }
-}</component>
+}]]></component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="UDoaHuec" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -42,29 +163,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feat/test&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/bebra/Documents/Dash/wasm-vote-choice/wasm-dpp&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.rust.reset.selective.auto.import": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/bebra/Documents/Dash/owl352/wasm-dpp",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true",
+    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
+  <component name="RustProjectSettings">
+    <option name="toolchainHomeDirectory" value="$USER_HOME$/.cargo/bin" />
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-WS-242.21829.149" />
+        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-WS-251.25410.117" />
       </set>
     </attachedChunks>
   </component>
@@ -88,6 +215,8 @@
       <workItem from="1734621221028" duration="46000" />
       <workItem from="1735236023441" duration="1938000" />
       <workItem from="1735306118421" duration="672000" />
+      <workItem from="1748720169591" duration="464000" />
+      <workItem from="1748818147192" duration="884000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
