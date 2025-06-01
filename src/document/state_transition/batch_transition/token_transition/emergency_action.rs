@@ -13,7 +13,7 @@ impl From<TokenEmergencyActionTransition> for TokenEmergencyActionTransitionWasm
     }
 }
 
-#[wasm_bindgen(js_class = TokenEmergencyActionTransitionWasm)]
+#[wasm_bindgen(js_class = TokenDirectPurchaseTransition)]
 impl TokenEmergencyActionTransitionWasm {
     #[wasm_bindgen(js_name=getPublicNote)]
     pub fn public_note(&self) -> Option<String> {

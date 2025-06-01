@@ -2354,6 +2354,10 @@ export class TokenDestroyFrozenFundsTransition {
 export class TokenDirectPurchaseTransition {
   private constructor();
   free(): void;
+  getPublicNote(): string | undefined;
+  getEmergencyAction(): number;
+  getCount(): bigint;
+  getTotalAgreedPrice(): bigint;
 }
 export class TokenDirectPurchaseUserPriceTooLow {
   private constructor();
@@ -2695,8 +2699,8 @@ export interface InitOutput {
   readonly incompatibledatacontractschemaerror_getCode: (a: number) => number;
   readonly incompatibledatacontractschemaerror_message: (a: number) => [number, number];
   readonly __wbg_tokenemergencyactiontransition_free: (a: number, b: number) => void;
-  readonly tokenemergencyactiontransitionwasm_getPublicNote: (a: number) => [number, number];
-  readonly tokenemergencyactiontransitionwasm_getEmergencyAction: (a: number) => number;
+  readonly tokendirectpurchasetransition_getPublicNote: (a: number) => [number, number];
+  readonly tokendirectpurchasetransition_getEmergencyAction: (a: number) => number;
   readonly __wbg_incompatibledocumenttypeschemaerror_free: (a: number, b: number) => void;
   readonly incompatibledocumenttypeschemaerror_getOperation: (a: number) => [number, number];
   readonly incompatibledocumenttypeschemaerror_getPropertyPath: (a: number) => [number, number];
@@ -3398,8 +3402,8 @@ export interface InitOutput {
   readonly systempropertyindexalreadypresenterror_getCode: (a: number) => number;
   readonly systempropertyindexalreadypresenterror_message: (a: number) => [number, number];
   readonly __wbg_tokendirectpurchasetransition_free: (a: number, b: number) => void;
-  readonly tokendirectpurchasetransitionwasm_getCount: (a: number) => bigint;
-  readonly tokendirectpurchasetransitionwasm_getTotalAgreedPrice: (a: number) => bigint;
+  readonly tokendirectpurchasetransition_getCount: (a: number) => bigint;
+  readonly tokendirectpurchasetransition_getTotalAgreedPrice: (a: number) => bigint;
   readonly __wbg_documenttimestampsareequalerror_free: (a: number, b: number) => void;
   readonly documenttimestampsareequalerror_getDocumentId: (a: number) => any;
   readonly documenttimestampsareequalerror_getCode: (a: number) => number;

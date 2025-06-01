@@ -15,7 +15,7 @@ impl From<TokenDirectPurchaseTransition> for TokenDirectPurchaseTransitionWasm {
     }
 }
 
-#[wasm_bindgen(js_class = TokenDirectPurchaseTransitionWasm)]
+#[wasm_bindgen(js_class = TokenDirectPurchaseTransition)]
 impl TokenDirectPurchaseTransitionWasm {
     #[wasm_bindgen(js_name=getCount)]
     pub fn count(&self) -> TokenAmount {
