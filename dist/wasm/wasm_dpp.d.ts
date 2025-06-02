@@ -2354,8 +2354,6 @@ export class TokenDestroyFrozenFundsTransition {
 export class TokenDirectPurchaseTransition {
   private constructor();
   free(): void;
-  getPublicNote(): string | undefined;
-  getEmergencyAction(): number;
   getCount(): bigint;
   getTotalAgreedPrice(): bigint;
 }
@@ -2369,6 +2367,8 @@ export class TokenDirectPurchaseUserPriceTooLow {
 export class TokenEmergencyActionTransition {
   private constructor();
   free(): void;
+  getPublicNote(): string | undefined;
+  getEmergencyAction(): number;
 }
 export class TokenFreezeTransition {
   private constructor();
@@ -2699,8 +2699,8 @@ export interface InitOutput {
   readonly incompatibledatacontractschemaerror_getCode: (a: number) => number;
   readonly incompatibledatacontractschemaerror_message: (a: number) => [number, number];
   readonly __wbg_tokenemergencyactiontransition_free: (a: number, b: number) => void;
-  readonly tokendirectpurchasetransition_getPublicNote: (a: number) => [number, number];
-  readonly tokendirectpurchasetransition_getEmergencyAction: (a: number) => number;
+  readonly tokenemergencyactiontransition_getPublicNote: (a: number) => [number, number];
+  readonly tokenemergencyactiontransition_getEmergencyAction: (a: number) => number;
   readonly __wbg_incompatibledocumenttypeschemaerror_free: (a: number, b: number) => void;
   readonly incompatibledocumenttypeschemaerror_getOperation: (a: number) => [number, number];
   readonly incompatibledocumenttypeschemaerror_getPropertyPath: (a: number) => [number, number];
