@@ -10,21 +10,21 @@ return toString.call(val);}if(className=='Object'){// we're a user defined class
 // easier than looping through ownProperties of `val`.
 try{return'Object('+JSON.stringify(val)+')';}catch(_){return'Object';}}// errors
 if(val instanceof Error){return"".concat(val.name,": ").concat(val.message,"\n").concat(val.stack);}// TODO we could test for more things here, like `Set`s and `Map`s.
-return className;}function passArrayJsValueToWasm0(array,malloc){const ptr=malloc(array.length*4,4)>>>0;for(let i=0;i<array.length;i++){const add=addToExternrefTable0(array[i]);getDataViewMemory0().setUint32(ptr+4*i,add,true);}WASM_VECTOR_LEN=array.length;return ptr;}function getArrayJsValueFromWasm0(ptr,len){ptr=ptr>>>0;const mem=getDataViewMemory0();const result=[];for(let i=ptr;i<ptr+4*len;i+=4){result.push(wasm.__wbindgen_export_4.get(mem.getUint32(i,true)));}wasm.__externref_drop_slice(ptr,len);return result;}function takeFromExternrefTable0(idx){const value=wasm.__wbindgen_export_4.get(idx);wasm.__externref_table_dealloc(idx);return value;}function _assertClass(instance,klass){if(!(instance instanceof klass)){throw new Error("expected instance of ".concat(klass.name));}}/**
- * @returns {number}
- */function getLatestProtocolVersion(){const ret=wasm.getLatestProtocolVersion();return ret>>>0;}let cachedUint32ArrayMemory0=null;function getUint32ArrayMemory0(){if(cachedUint32ArrayMemory0===null||cachedUint32ArrayMemory0.byteLength===0){cachedUint32ArrayMemory0=new Uint32Array(wasm.memory.buffer);}return cachedUint32ArrayMemory0;}function passArray32ToWasm0(arg,malloc){const ptr=malloc(arg.length*4,4)>>>0;getUint32ArrayMemory0().set(arg,ptr/4);WASM_VECTOR_LEN=arg.length;return ptr;}/**
- * @param {any} raw_parameters
- * @returns {any}
- */function createAssetLockProofInstance(raw_parameters){const ret=wasm.createAssetLockProofInstance(raw_parameters);if(ret[2]){throw takeFromExternrefTable0(ret[1]);}return takeFromExternrefTable0(ret[0]);}/**
+return className;}function _assertClass(instance,klass){if(!(instance instanceof klass)){throw new Error("expected instance of ".concat(klass.name));}}function takeFromExternrefTable0(idx){const value=wasm.__wbindgen_export_4.get(idx);wasm.__externref_table_dealloc(idx);return value;}function passArrayJsValueToWasm0(array,malloc){const ptr=malloc(array.length*4,4)>>>0;for(let i=0;i<array.length;i++){const add=addToExternrefTable0(array[i]);getDataViewMemory0().setUint32(ptr+4*i,add,true);}WASM_VECTOR_LEN=array.length;return ptr;}function getArrayJsValueFromWasm0(ptr,len){ptr=ptr>>>0;const mem=getDataViewMemory0();const result=[];for(let i=ptr;i<ptr+4*len;i+=4){result.push(wasm.__wbindgen_export_4.get(mem.getUint32(i,true)));}wasm.__externref_drop_slice(ptr,len);return result;}/**
  * @param {Uint8Array} bytes
  * @returns {any}
  */function deserializeConsensusError(bytes){const ptr0=passArray8ToWasm0(bytes,wasm.__wbindgen_malloc);const len0=WASM_VECTOR_LEN;const ret=wasm.deserializeConsensusError(ptr0,len0);if(ret[2]){throw takeFromExternrefTable0(ret[1]);}return takeFromExternrefTable0(ret[0]);}/**
+ * @returns {number}
+ */function getLatestProtocolVersion(){const ret=wasm.getLatestProtocolVersion();return ret>>>0;}/**
  * @param {any} contract_id
  * @param {any} owner_id
  * @param {string} document_type
  * @param {Uint8Array} entropy
  * @returns {any}
- */function generateDocumentId(contract_id,owner_id,document_type,entropy){const ptr0=passStringToWasm0(document_type,wasm.__wbindgen_malloc,wasm.__wbindgen_realloc);const len0=WASM_VECTOR_LEN;const ptr1=passArray8ToWasm0(entropy,wasm.__wbindgen_malloc);const len1=WASM_VECTOR_LEN;const ret=wasm.generateDocumentId(contract_id,owner_id,ptr0,len0,ptr1,len1);if(ret[2]){throw takeFromExternrefTable0(ret[1]);}return takeFromExternrefTable0(ret[0]);}function __wbg_adapter_60(arg0,arg1,arg2){wasm.closure181_externref_shim(arg0,arg1,arg2);}function __wbg_adapter_2126(arg0,arg1,arg2,arg3){wasm.closure2964_externref_shim(arg0,arg1,arg2,arg3);}/**
+ */function generateDocumentId(contract_id,owner_id,document_type,entropy){const ptr0=passStringToWasm0(document_type,wasm.__wbindgen_malloc,wasm.__wbindgen_realloc);const len0=WASM_VECTOR_LEN;const ptr1=passArray8ToWasm0(entropy,wasm.__wbindgen_malloc);const len1=WASM_VECTOR_LEN;const ret=wasm.generateDocumentId(contract_id,owner_id,ptr0,len0,ptr1,len1);if(ret[2]){throw takeFromExternrefTable0(ret[1]);}return takeFromExternrefTable0(ret[0]);}let cachedUint32ArrayMemory0=null;function getUint32ArrayMemory0(){if(cachedUint32ArrayMemory0===null||cachedUint32ArrayMemory0.byteLength===0){cachedUint32ArrayMemory0=new Uint32Array(wasm.memory.buffer);}return cachedUint32ArrayMemory0;}function passArray32ToWasm0(arg,malloc){const ptr=malloc(arg.length*4,4)>>>0;getUint32ArrayMemory0().set(arg,ptr/4);WASM_VECTOR_LEN=arg.length;return ptr;}/**
+ * @param {any} raw_parameters
+ * @returns {any}
+ */function createAssetLockProofInstance(raw_parameters){const ret=wasm.createAssetLockProofInstance(raw_parameters);if(ret[2]){throw takeFromExternrefTable0(ret[1]);}return takeFromExternrefTable0(ret[0]);}function __wbg_adapter_60(arg0,arg1,arg2){wasm.closure181_externref_shim(arg0,arg1,arg2);}function __wbg_adapter_2126(arg0,arg1,arg2,arg3){wasm.closure2964_externref_shim(arg0,arg1,arg2,arg3);}/**
  * @enum {0 | 1 | 2 | 3 | 4 | 5 | 6}
  */const KeyPurpose=exports.KeyPurpose=Object.freeze({/**
      * at least one authentication key must be registered for all security levels
@@ -2700,9 +2700,8 @@ return className;}function passArrayJsValueToWasm0(array,malloc){const ptr=mallo
      * @param {TokenConfiguration} token_configuration
      * @returns {any}
      */getRecipientId(token_configuration){_assertClass(token_configuration,TokenConfiguration);var ptr0=token_configuration.__destroy_into_raw();const ret=wasm.tokenminttransition_getRecipientId(this.__wbg_ptr,ptr0);if(ret[2]){throw takeFromExternrefTable0(ret[1]);}return takeFromExternrefTable0(ret[0]);}/**
-     * @param {TokenConfiguration} token_configuration
      * @returns {any | undefined}
-     */getIssuedToIdentityId(token_configuration){_assertClass(token_configuration,TokenConfiguration);var ptr0=token_configuration.__destroy_into_raw();const ret=wasm.tokenminttransition_getIssuedToIdentityId(this.__wbg_ptr,ptr0);return ret;}/**
+     */getIssuedToIdentityId(){const ret=wasm.tokenminttransition_getIssuedToIdentityId(this.__wbg_ptr);return ret;}/**
      * @returns {string | undefined}
      */getPublicNote(){const ret=wasm.tokenminttransition_getPublicNote(this.__wbg_ptr);let v1;if(ret[0]!==0){v1=getStringFromWasm0(ret[0],ret[1]).slice();wasm.__wbindgen_free(ret[0],ret[1]*1,1);}return v1;}/**
      * @returns {bigint}

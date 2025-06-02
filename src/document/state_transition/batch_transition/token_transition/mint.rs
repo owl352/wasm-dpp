@@ -32,7 +32,6 @@ impl TokenMintTransitionWasm {
     #[wasm_bindgen(js_name=getIssuedToIdentityId)]
     pub fn issued_to_identity_id(
         &self,
-        token_configuration: TokenConfigurationWasm,
     ) -> Option<IdentifierWrapper> {
         match self.0.issued_to_identity_id() {
             Some(id) => Some(id.into()),
